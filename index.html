@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CORE | Computer & AI Explorer</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-core-version="v5-fixed">
+<div class="bg-grid"></div>
+<div class="noise"></div>
+
+<header class="nav">
+  <div class="brand">CORE<span>//</span></div>
+  <div class="nav-links"><a href="#home">HOME</a><a href="#components">COMPONENTS</a><a href="#simulator">SIMULATOR</a><a href="#ai">AI</a><a href="#about">ABOUT</a></div>
+  <div class="live"><i></i> INTERACTIVE LAB</div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy">
+    <div class="eyebrow">COMPUTER ANATOMY / DIGITAL LAB</div>
+    <h1>See what makes<br><span>a computer.</span></h1>
+    <p>Start with the complete setup. Click any part to open its story, understand what it does and see why it matters.</p>
+    <a class="hero-btn" href="#components">EXPLORE COMPONENTS <b>↓</b></a>
+  </div>
+
+  <div class="hero-scene">
+    <div class="monitor-hero">
+      <div class="screen">
+        <div class="screen-glow"></div>
+        <div class="screen-ui"><span>CORE SYSTEM</span><b>READY</b><small>PROCESS • MEMORY • OUTPUT</small></div>
+      </div>
+      <div class="monitor-neck"></div><div class="monitor-foot"></div>
+    </div>
+    <div class="tower-hero">
+      <div class="glass-side"></div><div class="tower-front"></div><div class="tower-top"></div>
+      <div class="fan f1"></div><div class="fan f2"></div><div class="fan f3"></div>
+      <div class="gpu-strip"></div><div class="cpu-block"></div><div class="ram-stick r1"></div><div class="ram-stick r2"></div>
+      <div class="tower-label">PC / 01</div>
+    </div>
+    <div class="keyboard-hero">
+      <div class="keyrow"><i>Q</i><i>W</i><i>E</i><i>R</i><i>T</i><i>Y</i><i>U</i><i>I</i><i>O</i><i>P</i></div>
+      <div class="keyrow"><i>A</i><i>S</i><i>D</i><i>F</i><i>G</i><i>H</i><i>J</i><i>K</i><i>L</i></div>
+      <div class="keyrow"><i>Z</i><i>X</i><i>C</i><i>V</i><i>B</i><i>N</i><i>M</i></div>
+    </div>
+    <div class="mouse-hero"><span></span></div>
+    <div class="desk"></div>
+  </div>
+  <div class="hero-tip"><span>01</span> COMPLETE DESKTOP SETUP <b>CLICK A COMPONENT BELOW</b></div>
+</section>
+
+<section class="components" id="components">
+  <div class="section-head">
+    <div><div class="eyebrow">02 / THE HARDWARE</div><h2>Meet the <em>components.</em></h2></div>
+    <p>Each part has a job. Select one to open a detailed explanation.</p>
+  </div>
+  <div class="component-grid">
+    <button class="card selected" data-part="case"><div class="card-art case-art"><i></i></div><span>01</span><h3>PC Case</h3><p>Protects and organizes everything inside.</p></button>
+    <button class="card" data-part="motherboard"><div class="card-art board-art"></div><span>02</span><h3>Motherboard</h3><p>The communication layer connecting the machine.</p></button>
+    <button class="card" data-part="cpu"><div class="card-art cpu-art"></div><span>03</span><h3>CPU</h3><p>The processor that executes instructions.</p></button>
+    <button class="card" data-part="gpu"><div class="card-art gpu-art"><i></i><i></i><i></i></div><span>04</span><h3>GPU</h3><p>Parallel compute for graphics and AI workloads.</p></button>
+    <button class="card" data-part="ram"><div class="card-art ram-art"><i></i><i></i></div><span>05</span><h3>RAM</h3><p>Fast temporary working memory.</p></button>
+    <button class="card" data-part="storage"><div class="card-art ssd-art"></div><span>06</span><h3>Storage</h3><p>Persistent memory for files and software.</p></button>
+    <button class="card" data-part="cooling"><div class="card-art cooling-art"><i></i></div><span>07</span><h3>Cooling</h3><p>Moves heat away from sensitive silicon.</p></button>
+    <button class="card" data-part="psu"><div class="card-art psu-art"></div><span>08</span><h3>Power Supply</h3><p>Converts electricity into usable system power.</p></button>
+    <button class="card" data-part="monitor"><div class="card-art monitor-art"></div><span>09</span><h3>Monitor</h3><p>Turns digital frames into visible images.</p></button>
+    <button class="card" data-part="keyboard"><div class="card-art keyboard-art"></div><span>10</span><h3>Keyboard</h3><p>Sends key presses into the computer.</p></button>
+    <button class="card" data-part="mouse"><div class="card-art mouse-art"></div><span>11</span><h3>Mouse</h3><p>Tracks movement and pointer input.</p></button>
+  </div>
+
+</section>
+
+<section class="simulator" id="simulator">
+  <div class="section-head">
+    <div><div class="eyebrow">03 / THE COMPUTER LAB</div><h2>Play with the <em>machine.</em></h2></div>
+    <p>Orbit the computer, zoom in, select hardware and switch the system on. The simulation reacts as the workload changes.</p>
+  </div>
+  <div class="sim-shell">
+    <div class="sim-stage" id="pcSimulator">
+      <div class="sim-hud">
+        <span id="simStatus">SYSTEM OFFLINE</span>
+        <span id="simSelection">SELECT A COMPONENT</span>
+      </div>
+      <div class="sim-help">DRAG TO ORBIT · SCROLL TO ZOOM · CLICK A PART</div>
+      <div class="sim-tooltip" id="simTooltip"></div>
+    </div>
+    <aside class="sim-controls">
+      <div class="control-head"><span>CONTROL DECK</span><b id="powerLabel">OFFLINE</b></div>
+      <button class="power-btn" id="powerBtn" type="button"><i></i><span>POWER ON</span></button>
+      <div class="control-group">
+        <label>WORKLOAD <output id="loadValue">35%</output></label>
+        <input id="loadSlider" type="range" min="0" max="100" value="35">
+      </div>
+      <div class="control-grid">
+        <button type="button" id="explodeBtn">EXPLODE VIEW</button>
+        <button type="button" id="airBtn">AIRFLOW ON</button>
+        <button type="button" id="labelsBtn">LABELS ON</button>
+        <button type="button" id="resetBtn">RESET VIEW</button>
+      </div>
+      <div class="telemetry">
+        <div><small>CPU LOAD</small><b id="cpuRead">0%</b></div>
+        <div><small>GPU LOAD</small><b id="gpuRead">0%</b></div>
+        <div><small>RAM</small><b id="ramRead">4.2 GB</b></div>
+        <div><small>TEMP</small><b id="tempRead">27°C</b></div>
+      </div>
+      <div class="sim-info" id="simInfo"><b>INTERACTIVE MODE</b><p>Click the CPU, GPU, RAM, storage, motherboard or cooling system to inspect it. Power the machine on to activate fans, status lights and workload telemetry.</p></div>
+    </aside>
+  </div>
+</section>
+
+<section class="component-detail">
+  <div class="detail-visual"><div id="detailModel"></div><div class="orbit-ring"></div><div class="visual-tag">INTERACTIVE VIEW</div></div>
+  <div class="detail-copy">
+    <div class="eyebrow" id="dIndex">01 / CHASSIS</div>
+    <h2 id="dName">PC <em>Case</em></h2>
+    <p id="dDesc"></p>
+    <div class="detail-points" id="dPoints"></div>
+    <div class="spec-box"><div><small>ROLE</small><b id="dRole"></b></div><div><small>WHY IT MATTERS</small><b id="dWhy"></b></div><div><small>CONNECTED TO</small><b id="dConnect"></b></div></div>
+  </div>
+</section>
+
+<section class="ai" id="ai">
+  <div class="ai-bg-orb"></div>
+  <div class="ai-copy">
+    <div class="eyebrow">04 / INTELLIGENCE</div>
+    <h2>What is <em>AI?</em></h2>
+    <p>Artificial Intelligence is a field of computing focused on making systems perform tasks that normally require human-like abilities such as recognizing patterns, understanding language, making predictions and generating content.</p>
+    <div class="ai-facts">
+      <div><b>LEARN</b><span>Models learn patterns from data.</span></div>
+      <div><b>PREDICT</b><span>Systems estimate likely outcomes.</span></div>
+      <div><b>CREATE</b><span>Generative models produce new content.</span></div>
+    </div>
+  </div>
+
+  <div class="sandbox">
+    <div class="sandbox-head"><span>AI SANDBOX</span><i>LOCAL DEMO</i></div>
+    <div class="brain">
+      <div class="brain-core"></div><div class="pulse p1"></div><div class="pulse p2"></div><div class="pulse p3"></div>
+    </div>
+    <div class="chat">
+      <div class="chat-title">Ask the machine</div>
+      <div class="messages" id="messages"><div class="bot">Hi. Pick a question or ask me something about computers and AI.</div></div>
+      <div class="presets">
+        <button data-q="How does a computer actually start when I press the power button?">Power-on sequence</button>
+        <button data-q="What is the difference between CPU, GPU and RAM?">CPU vs GPU vs RAM</button>
+        <button data-q="Why does AI need so much computing power?">Why AI needs compute</button>
+        <button data-q="What happens inside a neural network when it learns?">Neural networks</button>
+        <button data-q="How does training an AI model differ from using it?">Training vs inference</button>
+        <button data-q="What are tokens and why do AI models use them?">Tokens</button>
+        <button data-q="What is an AI hallucination and why does it happen?">AI hallucinations</button>
+        <button data-q="How do AI models use data without simply memorizing everything?">Data & generalization</button>
+        <button data-q="What is an NPU and how is it different from a GPU?">NPU vs GPU</button>
+        <button data-q="How does AI affect privacy, security and bias?">AI risks</button>
+      </div>
+      <div class="chat-input"><input id="question" placeholder="Type a question about computers or AI..."><button id="send">↗</button></div>
+    </div>
+  </div>
+</section>
+
+<section class="ai-layers">
+  <div class="eyebrow">05 / INSIDE AI</div>
+  <h2>From data to<br><em>an answer.</em></h2>
+  <div class="layers">
+    <div><span>01</span><b>DATA</b><p>Examples provide the material from which patterns can be learned.</p></div>
+    <div><span>02</span><b>MODEL</b><p>A mathematical system represents relationships found in the data.</p></div>
+    <div><span>03</span><b>COMPUTE</b><p>CPUs and especially GPUs can process huge numbers of operations.</p></div>
+    <div><span>04</span><b>OUTPUT</b><p>The trained system produces a prediction, classification or generated result.</p></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div><div class="eyebrow">06 / THE BIG PICTURE</div><h2>Hardware gives AI<br><em>a place to run.</em></h2></div>
+  <p>Your keyboard creates input. The CPU coordinates instructions. RAM holds active information. Storage keeps data. GPUs accelerate parallel workloads. The monitor shows the result. AI is the layer that can turn those computing resources into systems that learn patterns, generate content and help people solve problems.</p>
+  <a href="#home">BACK TO TOP ↑</a>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
